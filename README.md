@@ -1,147 +1,71 @@
 # BSC_DPDM2025
 Phattarapol Wannayos 663020287-4
 
-# บทที่ 1: บทนำ (Chapter 1. Introduction)
-## 1) ความหมายของ Data Mining
-Data Mining คือเทคนิคสำหรับ “ค้นพบความรู้ใหม่” จากชุดข้อมูลขนาดใหญ่ โดยดึงรูปแบบที่ไม่ชัดเจนมาก่อนออกมาใช้งานจริง ทั้งในเชิงพรรณนา (Descriptive) และเชิงคาดการณ์ (Predictive)
+# 📊 CS 412: Introduction to Data Mining
+> **สรุปเนื้อหาบทเรียน**
 
-ในบริบทของ KDD (Knowledge Discovery in Databases) จะประกอบด้วย:
-- เตรียมข้อมูล (cleaning, integration)
-- เลือกข้อมูลที่เกี่ยวข้อง
-- ทำเหมืองข้อมูล
-- ประเมินรูปแบบ
-- สรุปผลและนำเสนอเป็นความรู้
+---
 
-## 2) เหตุผลที่ Data Mining สำคัญ
-- ปริมาณข้อมูลเติบโตอย่างมาก (Web, Sensors, Social, Business)
-- แหล่งข้อมูลหลากหลายชนิดและซับซ้อนมากขึ้น
-- ต้องการการวิเคราะห์แบบอัตโนมัติแทนการทำงานเชิง manual
-- ใช้เพื่อเปลี่ยน “ข้อมูลดิบ” ให้กลายเป็น “ความรู้ที่ใช้ในการตัดสินใจ”
+## 🚀 สรุปเนื้อหาแต่ละบทเรียน
 
-## 3) ประเภทข้อมูลที่รองรับ
-- *Database / Data Warehouse*
-- *Stream & Sensor Data*
-- *Time-Series / Sequence / Temporal*
-- *Graph & Social Network*
-- *Spatial / Multimedia*
-- *Text & Web Data*
+### 🔹 Chapter 1: Introduction
+[เอกสาร Chapter 1: Introduction](https://drive.google.com/file/d/19bCuYRztW_lbUu5dORG0WEOcsGgITW6b/view?usp=drive_link)
 
-## 4) ฟังก์ชันหลักของ Data Mining
-- *Generalization (การสรุปภาพรวม)*  
-สรุปแนวโน้มระดับสูง เช่น OLAP, Data Cube
+เน้นความเข้าใจเกี่ยวกับกระบวนการเปลี่ยนข้อมูลให้เป็นความรู้ (KDD Process)
+* **KDD Process:** เริ่มตั้งแต่ Data Cleaning -> Integration -> Selection -> Transformation -> Data Mining -> Pattern Evaluation -> Knowledge Presentation
+* **Data Mining Functionalities:** การวิเคราะห์ลักษณะเฉพาะ (Characterization), การจำแนกประเภท (Classification), การจัดกลุ่ม (Clustering), และการหาความสัมพันธ์ (Association)
 
-- *Pattern Discovery (การค้นพบรูปแบบ)*  
-หา itemset ที่พบบ่อย, association rules
+### 🔹 Chapter 2: Getting to Know Your Data
+[เอกสาร Chapter 2: Getting to Know Your Data](https://drive.google.com/file/d/1TT5xX_zeSOIgcOW76V_uk-lLiVX8mqnB/view?usp=drive_link)
 
-- *Classification (การจำแนกประเภท)*  
-สร้างโมเดลทำนาย label เช่น Tree, SVM, Neural Network
-- *Cluster Analysis (การวิเคราะห์กลุ่ม)*
-จัดกลุ่มข้อมูลแบบไม่มีคำตอบกำกับ
-- *Outlier Analysis (การวิเคราะห์ค่าผิดปกติ)*  
-ตรวจจับค่าผิดปกติที่เบี่ยงเบนจากข้อมูลทั่วไป
-- *Time & Ordering (เวลาและลำดับ)*  
-ลำดับเหตุการณ์ แนวโน้ม และพฤติกรรมตามเวลา
-- *Structure & Network Analysis (โครงสร้างและเครือข่าย)*  
-ค้นหารูปแบบในโครงสร้างข้อมูล เช่น subgraph, community detection
+การสำรวจคุณลักษณะของข้อมูล (Data Exploration)
+* **Attribute Types:** Nominal, Binary, Ordinal และ Numeric (Interval-scaled, Ratio-scaled)
+* **Statistical Descriptions:** การวัดค่ากลาง (Mean, Median, Mode) และการวัดการกระจาย (Variance, Standard Deviation)
+* **Measuring Similarity:** การวัดความคล้ายและระยะห่าง เช่น Euclidean Distance และ Cosine Similarity
 
-## 5) เทคโนโลยีที่เกี่ยวข้อง
-Data Mining ผสานวิธีการจากหลายสาขา ได้แก่:
-- Machine Learning  
-- Statistical Modeling  
-- Database & Data Warehousing  
-- Pattern Recognition  
-- High-Performance Computing  
-- Information Visualization  
+### 🔹 Chapter 3: Data Preprocessing
+[เอกสาร Chapter 3: Data Preprocessing](https://drive.google.com/file/d/14ATIMHTb04fHVioefS0BDZhyKeXsqalJ/view?usp=drive_link)
 
-## 6) ตัวอย่างงานประยุกต์
-- การวิเคราะห์เว็บและการจัดอันดับ (PageRank, SEO)
-- ระบบแนะนำสินค้า (Recommender)
-- Market Basket Analysis / Targeted Marketing
-- การแพทย์และประมวลผลข้อมูลชีวภาพ
-- วิเคราะห์โซเชียลและเครือข่ายข้อมูล
-- การวิเคราะห์ซอฟต์แวร์และบันทึกระบบ
+ขั้นตอนที่สำคัญที่สุดเพื่อให้ได้ข้อมูลที่มีคุณภาพ (Data Quality)
+* **Data Cleaning:** จัดการ Missing values และ Noisy data
+* **Data Integration:** การรวมข้อมูลจากหลายแหล่งและแก้ปัญหาความซ้ำซ้อน
+* **Data Reduction:** การลดขนาดข้อมูล (Dimensionality/Numerosity Reduction) เช่น PCA
+* **Data Transformation:** การปรับช่วงข้อมูล (Normalization) เช่น Min-max scaling และ Z-score
 
-## 7) ประเด็นท้าทายที่ต้องคำนึงถึง
-- ข้อมูลขนาดใหญ่ + มิติสูงมาก (High-dimensional)
-- ความหลากหลายของชนิดข้อมูล
-- การทำเหมืองข้อมูลแบบ streaming  
-- ความเป็นส่วนตัวและจริยธรรม (Privacy-preserving mining)
-- การสร้างผลลัพธ์ที่เข้าใจง่ายและนำไปใช้จริงได้
+### 🔹 Chapter 6: Mining Frequent Patterns
+[เอกสาร Chapter 6: Mining Frequent Patterns](https://drive.google.com/file/d/1Su1IOUjrc0mz7YfWqVSNClq41ceGvTuu/view?usp=drive_link)
 
-# 📌 บทที่ 2 — ทำความเข้าใจข้อมูลก่อนทำเหมืองข้อมูล (Getting to Know Your Data)
+การค้นหารูปแบบที่เกิดขึ้นบ่อยและความสัมพันธ์ของข้อมูล (Market Basket Analysis)
+* **Concepts:** การหาค่า Support และ Confidence
+* **Algorithms:** * **Apriori:** ใช้หลักการ Downward Closure
+    * **FP-growth:** การสร้าง FP-tree เพื่อหา Frequent patterns โดยไม่ต้องสร้าง Candidates
 
-ก่อนจะสร้างโมเดล ทำ clustering หรือ mining ใด ๆ  
-ต้องรู้จักข้อมูลให้ดีเสียก่อน  
-ตั้งแต่ชนิดของข้อมูล รูปแบบการกระจาย วิธีสำรวจ ไปจนถึงวัดความคล้ายกันของข้อมูล  
+### 🔹 Chapter 8: Classification (Basic)
+[เอกสาร Chapter 8: Classification (Basic)](https://drive.google.com/file/d/1u26q259zmnvnoJqWpKnxz8Vw1ZVYvFe_/view?usp=drive_link)
 
-## 🔹 1) องค์ประกอบของข้อมูลและชนิดของคุณลักษณะ
+การเรียนรู้แบบมีผู้สอน (Supervised Learning) เพื่อทำนายกลุ่มของข้อมูล
+* **Decision Tree:** การสร้างต้นไม้ตัดสินใจโดยใช้ Information Gain หรือ Gini Index
+* **Bayes Classification:** การใช้ทฤษฎีความน่าจะเป็น (Naïve Bayes)
+* **Evaluation:** การประเมินประสิทธิภาพด้วย Confusion Matrix, Accuracy, Precision และ Recall
 
-ข้อมูลทุกชุดประกอบด้วย:
+### 🔹 Chapter 9: Classification (Advanced)
+[เอกสาร Chapter 9: Classification (Advanced)](https://drive.google.com/file/d/1IZjmeVBh-SjpXGhSJMVoHPnlvTo9UaNE/view?usp=drive_link)
 
-- *Data Objects* — สิ่งที่ถูกเก็บข้อมูล เช่น ลูกค้า นักศึกษา รายการขาย  
-- *Attributes* — ตัวแปรที่ใช้อธิบาย object เช่น อายุ รายได้ เพศ
+เทคนิคการจำแนกข้อมูล
+* **Support Vector Machines (SVM):** การหา Hyperplane ที่เหมาะสมที่สุด
+* **Neural Networks:** โครงข่ายประสาทเทียมและการเรียนรู้เชิงลึก (Deep Learning)
+* **Lazy Learners:** เช่น k-Nearest Neighbors (k-NN)
 
-ประเภท attribute มีผลอย่างมากต่อการวิเคราะห์ เช่น:
-- *Nominal* → ระบุประเภท เช่น สี กลุ่ม  
-- *Binary* → สองสถานะ เช่น ติดเชื้อ/ไม่ติดเชื้อ  
-- *Ordinal* → มีลำดับ เช่น ระดับชั้นปี แต่ระยะห่างไม่แน่นอน  
-- *Numeric*
-  - Interval → ตัวเลขเรียงลำดับได้ แต่ไม่มีศูนย์จริง เช่น °C  
-  - Ratio → มีศูนย์แท้จริง สามารถเปรียบเทียบอัตราส่วนได้ เช่น น้ำหนัก/ความยาว  
+### 🔹 Chapter 10: Cluster Analysis
+[เอกสาร Chapter 10: Cluster Analysis](https://drive.google.com/file/d/1xdOn_kOUIYKgaOy4FbVt_ebu155I0wQJ/view?usp=drive_link)
 
-การเข้าใจประเภท attribute เป็นสิ่งสำคัญในการเลือก scale, encoding และ metric ที่เหมาะสม
+การเรียนรู้แบบไม่มีผู้สอน (Unsupervised Learning) เพื่อแบ่งกลุ่มข้อมูล
+* **Partitioning Methods:** เช่น K-means algorithm
+* **Hierarchical Methods:** การจัดกลุ่มแบบลำดับชั้น (Agglomerative - AGNES)
+* **Density-Based Methods:** เช่น DBSCAN สำหรับข้อมูลที่มีรูปร่างซับซ้อน
 
-## 🔹 2) ทำไมต้องสถิติเบื้องต้น?
+---
+# เอกสารเรียนรู้เพิ่มเติม
+[Data Mining: Concepts and Techniques](https://drive.google.com/file/d/1i3LoKfQWBuO0F18-ETLHcOo88PpCaOjQ/view?usp=drive_link)
 
-สถิติเบื้องต้นเป็นเครื่องมือแรกที่ช่วยให้เรา “อ่าน” บุคลิกของข้อมูล:
-
-### สิ่งที่ค้นหาได้จากสถิติพื้นฐาน:
-- *ค่ากลาง* → ค่าเฉลี่ย กลาง และค่าที่เกิดบ่อย  
-- *การกระจายตัว* → ความหลากหลาย ความสุดโต่ง ความไม่สมดุล  
-- *รูปทรงการกระจาย* → symmetric vs skewed
-
-### เครื่องมือที่ใช้สำรวจ:
-- *Boxplot* → ดูขอบเขตและ outlier  
-- *Histogram* → มอง distribution แบบภาพ  
-- *Scatter Plot* → ดูความสัมพันธ์ตัวแปรคู่  
-
-ข้อสำคัญ: พล็อตเดียวอาจหลอกตาได้ — ชุดข้อมูลที่มี boxplot เดียวกัน อาจมี histogram แตกต่างกัน
-
-## 🔹 3) การทำ Visualization = การมองข้อมูลแบบคน
-
-Visualization มีบทบาทเหมือน “แว่นขยาย” เพราะช่วย:
-
-✔ ค้นหา pattern ซ่อนเร้น  
-✔ ระบุความสัมพันธ์หรือความผิดปกติ  
-✔ เปิดทางเลือกให้เลือก feature/parameter
-
-รูปแบบ visualization ที่ปรากฏในบทนี้ เช่น:
-- *Pixel-based view* — ใช้ pixel สีแสดงค่า
-- *Parallel coordinate plot* — ไล่ค่าตามแกนหลายตัว
-- *Treemap* — ผังพื้นที่แบบลำดับชั้น  
-- *Tag cloud / network visualization* — ใช้ใน text & social analysis
-
-## 🔹 4) การวัดความเหมือน–ความต่างของข้อมูล
-
-หัวใจของ clustering, recommendation, anomaly detection ฯลฯ คือ:
-
-### 4.1 Distance สำหรับ Numeric Data  
-- *Minkowski Distance* (รวม Manhattan, Euclidean, Supremum)  
-→ เลือก p ที่ต่างกันได้ผลต่างกัน
-
-### 4.2 Binary Attribute  
-- Symmetric หรือ Asymmetric  
-- *Jaccard Similarity* นิยมใช้กับกรณีสำคัญไม่เท่ากัน เช่นค่าสถานะโรค
-
-### 4.3 Categorical
-- Matching หรือแปลงเป็น one-hot
-
-### 4.4 Ordinal / Mixed Type
-- แปลงเป็น rank และ normalized ก่อนคำนวณ  
-- ใช้สูตรน้ำหนักรวม attribute ต่างชนิดกัน
-
-### 4.5 Cosine Similarity
-- เหมาะกับข้อมูลที่เป็น vector เช่น text mining, document frequency
-
-เลือก metric ผิด ความแม่นยำของ model อาจตกฮวบ 
 
